@@ -19,8 +19,8 @@ abstract public class ResponserBase implements Listener{
 		if(!(event.getPacket() instanceof ModalFormResponsePacket)) return;
 		if(!(player instanceof Player)) return;
     ui = (ModalFormResponsePacket)event.getPacket();///???
-    String index = ui.data;
-    if(index == "null") return;
+    String index = ui.data.trim();
+    if(index.equals("null")) return;
     response(ui.formId,index,player);
   }
 }
