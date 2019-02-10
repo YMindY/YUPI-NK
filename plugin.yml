@@ -2,4 +2,4 @@ name: YUPI
 api: ["1.0.0"]
 version: "1.0.0"
 load: STARTUP
-main: yxmingy.yupi.Main
+main: yxmingy.yupi.Utils
