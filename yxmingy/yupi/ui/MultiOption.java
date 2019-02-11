@@ -3,7 +3,7 @@ package yxmingy.yupi.ui;
 import java.util.*;
 
 
-public class FormUI extends UIBase{
+public class MultiOption extends UIBase{
 
   /*Map button
   [
@@ -17,7 +17,7 @@ public class FormUI extends UIBase{
   */
   private ArrayList<Map<String, Object>> buttons;
   
-  public FormUI(String title)
+  public MultiOption(String title)
   {
     super("form",title);
     data.put("buttons",buttons);
@@ -26,21 +26,17 @@ public class FormUI extends UIBase{
   {
     data.put("content",text);
   }
-  public void setContent(Map<String, Object> elements)
-  {
-    data.put("content",elements);
-  }
   public void addButton(String text)
   {
     Map<String,Object> button = new LinkedHashMap<>();
     button.put("text",text);
     buttons.add(button);
   }
-  public void addButton(String text,String image_type,String image_data)
+  public void addButton(String text,boolean image_local,String image_data)
   {
     Map<String,Object> button = new LinkedHashMap<>(),
                        image = new LinkedHashMap<>();
-    image.put("type",image_type);
+    image.put("type",image_local ? "path" : "url");
     image.put("data",image_data);
     button.put("text",text);
     button.put("image",image);
