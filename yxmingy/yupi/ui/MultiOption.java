@@ -1,6 +1,7 @@
 package yxmingy.yupi.ui;
 
 import java.util.*;
+import java.util.ArrayList;
 
 
 public class MultiOption extends UIBase{
@@ -15,7 +16,7 @@ public class MultiOption extends UIBase{
     ]
   ]
   */
-  private ArrayList<Map<String, Object>> buttons;
+  private ArrayList<Map<String, Object>> buttons = new ArrayList<>();;
   
   public MultiOption(String title)
   {

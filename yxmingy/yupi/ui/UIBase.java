@@ -11,7 +11,7 @@ abstract public class UIBase {
       "content"=>(string/element)
     ]
   */
-  protected LinkedHashMap<String, Object> data;
+  protected LinkedHashMap<String, Object> data = new LinkedHashMap<>();
   
   public UIBase(String type,String title)
   {

@@ -1,10 +1,11 @@
 package yxmingy.yupi.ui;
 
 import java.util.*;
+import java.util.ArrayList;
 
 public class GarishForm extends UIBase{
 
-  private ArrayList<Map<String, Object>> content;
+  private ArrayList<Map<String, Object>> content = new ArrayList<>();
   
   public GarishForm(String title)
   {
