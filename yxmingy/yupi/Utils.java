@@ -1,10 +1,8 @@
 package yxmingy.yupi;
+
 import cn.nukkit.plugin.PluginBase;
 
-import cn.nukkit.event.*;
-
-
-public class Utils extends PluginBase implements Listener{
+public class Utils extends PluginBase{
 	public static int buildId(String data){
 	  int i,progress = 1,id = 0,length = data.length();
 	  char[] cdatas = data.toCharArray();
@@ -16,7 +14,7 @@ public class Utils extends PluginBase implements Listener{
 	}
 	public void onEnable() {
 		getLogger().notice("YUPI is Enabled! Author: xMing.");
-		getServer().getPluginManager().registerEvents(this, this);
+		getServer().getPluginManager().registerEvents(new HandlerManager(), this);
 	}
 	public void onDisable() {
 		getLogger().warning("YUPI is Turned Off!");

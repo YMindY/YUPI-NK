@@ -14,13 +14,14 @@ abstract public class ResponserBase implements Listener{
 	@EventHandler
   public void onServerReceivePacket(DataPacketReceiveEvent event)
   {
+    String index;
 		Player player = event.getPlayer();
 		ModalFormResponsePacket ui;
 		if(!(event.getPacket() instanceof ModalFormResponsePacket)) return;
-		if(!(player instanceof Player)) return;
+		//if(!(player instanceof Player)) return; /* wtfk? 我傻了? */
     ui = (ModalFormResponsePacket)event.getPacket();///???
-    String index = ui.data.trim();
-    if(index.equals("null")) return;
+    index = ui.data.trim();
+    //if(index.equals("null")) return;
     response(ui.formId,index,player);
   }
 }

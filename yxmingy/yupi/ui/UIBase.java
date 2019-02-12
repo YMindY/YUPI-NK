@@ -3,6 +3,7 @@ package yxmingy.yupi.ui;
 import cn.nukkit.Player;
 import java.util.*;
 import yxmingy.yupi.*;
+import yxmingy.yupi.HandlerManager;
 
 abstract public class UIBase {
   /*[
@@ -26,5 +27,11 @@ abstract public class UIBase {
       data,
       player
     );
+  }
+  
+  public void setHandler(HandlerBase handler)
+  {
+    int id = Utils.buildId((String)data.get("title"));
+    HandlerManager.addHandler(id,handler);
   }
 }
