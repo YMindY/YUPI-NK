@@ -10,5 +10,6 @@ abstract public class HandlerBase{
   {
     this.title = title;
   }
-  abstract void handle(String data,Player player);
+  abstract public void handle(String data,Player player);
 }
+ 
