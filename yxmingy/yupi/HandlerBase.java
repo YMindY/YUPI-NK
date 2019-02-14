@@ -4,9 +4,17 @@ package yxmingy.yupi;
 import cn.nukkit.Player;
 import yxmingy.yupi.HandlerBase;
 
-abstract public class HandlerBase{
-  protected String title = null;
+public abstract class HandlerBase{
+  protected String[] title;
+  public HandlerBase()
+  {
+    title = null;
+  }
   public HandlerBase(String title)
+  {
+    this.title[0] = title;
+  }
+  public HandlerBase(String[] title)
   {
     this.title = title;
   }
