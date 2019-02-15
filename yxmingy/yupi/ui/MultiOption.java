@@ -21,6 +21,7 @@ public class MultiOption extends UIBase{
   public MultiOption(String title)
   {
     super("form",title);
+    data.put("content","");
     data.put("buttons",buttons);
   }
   public void setContent(String text)
