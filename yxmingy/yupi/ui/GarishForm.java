@@ -9,7 +9,7 @@ public class GarishForm extends UIBase{
   
   public GarishForm(String title)
   {
-    super("costom_form",title);
+    super("custom_form",title);
     data.put("content",content);
   }
   public void addLabel(String text)
