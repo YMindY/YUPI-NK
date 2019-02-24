@@ -12,7 +12,7 @@ public abstract class HandlerBase{
   }
   public HandlerBase(String title)
   {
-  	this.title = new String[1];
+    this.title = new String[1];
     this.title[0] = title;
   }
   public HandlerBase(String[] title)
