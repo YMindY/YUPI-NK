@@ -17,7 +17,7 @@ abstract public class UIBase {
   public UIBase(String type,String title)
   {
     data.put("type",type);
-    data.put("title",title);
+    data.put("title",null==title ? "" : title);
   }
   
   public void send(Player player)
