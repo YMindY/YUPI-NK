@@ -5,13 +5,13 @@ public class DoubleOption extends UIBase{
   
   public DoubleOption(String title)
   {
-    super("modal_form",title);
+    super("modal",title);
     data.put("button1","是");
     data.put("button2","否");
   }
   public DoubleOption(String title,String button1,String button2)
   {
-    super("modal_form",title);
+    super("modal",title);
     data.put("button1",button1);
     data.put("button2",button2);
   }
