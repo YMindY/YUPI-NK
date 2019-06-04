@@ -13,6 +13,10 @@ public abstract class GarishHandlerBase extends HandlerBase{
     @SuppressWarnings("serial")
 		Object[] pdata = gson.fromJson(data,new TypeToken<Object[]>() {
 		}.getType());
+		if(null == pdata) {
+		  pdata = new Object[1];
+		  pdata[0] = "";
+		}
 		String[] sdata = new String[pdata.length];
 		int i = 0;
 		for(Object o : pdata){
