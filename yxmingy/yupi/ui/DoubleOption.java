@@ -15,10 +15,6 @@ public class DoubleOption extends UIBase{
     data.put("button1",button1);
     data.put("button2",button2);
   }
-  public void setContent(String text)
-  {
-    data.put("content",text);
-  }
   public void setButton1(String text)
   {
     data.put("button1",text);
@@ -26,5 +22,9 @@ public class DoubleOption extends UIBase{
   public void setButton2(String text)
   {
     data.put("button2",text);
+  }
+  private void setContent(String text)
+  {
+    data.put("content",text);
   }
 }
