@@ -11,8 +11,8 @@ public class UISender {
 	public static void sendUI(int formid, Map<String, Object> formdata,Player player)
 	{
 		ModalFormRequestPacket ui = new ModalFormRequestPacket();
-    ui.formId = formid;
-    ui.data = new GsonBuilder().setPrettyPrinting().create().toJson(formdata);
-    player.dataPacket(ui);
+		ui.formId = formid;
+		ui.data = new GsonBuilder().setPrettyPrinting().create().toJson(formdata);
+		player.dataPacket(ui);
 	}
 }
