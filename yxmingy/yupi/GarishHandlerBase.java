@@ -15,17 +15,16 @@ public abstract class GarishHandlerBase extends HandlerBase{
     GsonBuilder builder = new GsonBuilder();
     Gson gson = builder.create();
     @SuppressWarnings("serial")
-		Object[] pdata = gson.fromJson(data,new TypeToken<Object[]>() {
-		}.getType());
-		if(null == pdata) {
-		  pdata = new Object[1];
-		  pdata[0] = "";
-		}
-		String[] sdata = new String[pdata.length];
-		int i = 0;
-		for(Object o : pdata){
-		  sdata[i] = (String.valueOf(o));
-		  i++;
+    Object[] pdata = gson.fromJson(data,new TypeToken<Object[]>() {
+      }.getType());
+    if(null == pdata) {
+      pdata = new Object[1];
+      pdata[0] = "";
     }
-		handle(sdata,player);
+    String[] sdata = new String[pdata.length];
+    int i = 0;
+    for(Object o : pdata){
+      i++;
+    }
+    handle(sdata,player);
 }
