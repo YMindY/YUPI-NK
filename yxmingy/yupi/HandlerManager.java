@@ -21,7 +21,7 @@ public class HandlerManager implements Listener{
     String data;
     ModalFormResponsePacket ui;
     Player player = event.getPlayer();
-		if(!(event.getPacket() instanceof ModalFormResponsePacket)) return;
+    if(!(event.getPacket() instanceof ModalFormResponsePacket)) return;
     ui = (ModalFormResponsePacket)event.getPacket();
     data = ui.data.trim();
     if(handlers.containsKey(ui.formId)){
