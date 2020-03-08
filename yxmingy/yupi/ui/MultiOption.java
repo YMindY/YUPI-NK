@@ -24,10 +24,6 @@ public class MultiOption extends UIBase{
     data.put("content","");
     data.put("buttons",buttons);
   }
-  public void setContent(String text)
-  {
-    data.put("content",text);
-  }
   public void addButton(String text)
   {
     Map<String,Object> button = new LinkedHashMap<>();
@@ -43,5 +39,9 @@ public class MultiOption extends UIBase{
     button.put("text",text);
     button.put("image",image);
     buttons.add(button);
+  }
+  private void setContent(String text)
+  {
+    data.put("content",text);
   }
 }
