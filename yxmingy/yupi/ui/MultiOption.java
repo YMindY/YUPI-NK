@@ -34,12 +34,12 @@ public class MultiOption extends UIBase{
     button.put("text",text);
     buttons.add(button);
   }
-  public void addButton(String text,boolean image_local,String image_data)
+  public void addButton(String text,boolean use_local_image,String image_path)
   {
     Map<String,Object> button = new LinkedHashMap<>(),
                        image = new LinkedHashMap<>();
-    image.put("type",image_local ? "path" : "url");
-    image.put("data",image_data);
+    image.put("type",use_local_image ? "path" : "url");
+    image.put("data",image_path);
     button.put("text",text);
     button.put("image",image);
     buttons.add(button);
