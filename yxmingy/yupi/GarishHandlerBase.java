@@ -5,7 +5,11 @@ import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+
 public abstract class GarishHandlerBase extends HandlerBase{
+  
+  abstract public void handle(String[] data,Player player);
+  
   public void handle(String data,Player player)
   {
     GsonBuilder builder = new GsonBuilder();
@@ -24,6 +28,4 @@ public abstract class GarishHandlerBase extends HandlerBase{
 		  i++;
     }
 		handle(sdata,player);
-  }
-  abstract public void handle(String[] data,Player player);
 }
