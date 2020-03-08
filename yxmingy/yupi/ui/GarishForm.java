@@ -12,6 +12,7 @@ public class GarishForm extends UIBase{
     super("custom_form",title);
     data.put("content",content);
   }
+  /* 文字 */
   public void addLabel(String text)
   {
     Map<String,Object> content = new LinkedHashMap<>();
@@ -19,6 +20,7 @@ public class GarishForm extends UIBase{
     content.put("text",text);
     addContent(content);
   }
+  /* 单选项 */
   public void addToggle(String text)
   {
     Map<String,Object> content = new LinkedHashMap<>();
@@ -34,6 +36,7 @@ public class GarishForm extends UIBase{
     content.put("default",_default);
     addContent(content);
   }
+  /* 滑块 */
   public void addSlider(String text,int min,int max,int step)
   {
     Map<String,Object> content = new LinkedHashMap<>();
@@ -44,6 +47,7 @@ public class GarishForm extends UIBase{
     content.put("step",step);
     addContent(content);
   }
+  /* 下拉菜单 */
   public void addDropdown(String text,String[] options)
   {
     Map<String,Object> content = new LinkedHashMap<>();
@@ -53,6 +57,7 @@ public class GarishForm extends UIBase{
     content.put("default",null);
     addContent(content);
   }
+  /* 输入框 */
   public void addInput(String text,String placeholder)
   {
     Map<String,Object> content = new LinkedHashMap<>();
@@ -62,7 +67,7 @@ public class GarishForm extends UIBase{
     content.put("default",null);
     addContent(content);
   }
-  public void addContent(Map<String,Object> content)
+  private void addContent(Map<String,Object> content)
   {
     this.content.add(content);
   }
