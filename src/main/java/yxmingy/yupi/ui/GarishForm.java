@@ -1,5 +1,7 @@
 package yxmingy.yupi.ui;
 
+import yxmingy.yupi.GarishHandlerBase;
+
 import java.util.*;
 import java.util.ArrayList;
 
@@ -11,6 +13,10 @@ public class GarishForm extends UIBase{
   {
     super("custom_form",title);
     data.put("content",content);
+  }
+  public void setHandler(GarishHandlerBase handler)
+  {
+    super.setHandler(handler);
   }
   /* 文字 */
   public void addLabel(String text)
