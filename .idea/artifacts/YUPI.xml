@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="YUPI">
+    <output-path>$PROJECT_DIR$/out/artifacts/YUPI</output-path>
+    <root id="archive" name="YUPI.jar">
+      <element id="module-output" name="YUPI-NK" />
+    </root>
+  </artifact>
+</component>
